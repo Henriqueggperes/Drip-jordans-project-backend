@@ -4,7 +4,7 @@ const localUrl = "mongodb://localhost:27017/jordans-db"
 
 const connectToDatabase = () => {
   mongoose
-    .connect(process.env.URI_DATABASE, { 
+    .connect(process.example.env.URI_DATABASE, { 
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
