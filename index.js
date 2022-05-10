@@ -1,9 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const routes = require("./src/routes/jordan.route");
 const connectToDataBase = require('./src/database/database')
 //Configurando nossa aplicaçao para trabalhar com json
-const port = 3333;
+const port = process.env.PORT || 3000;
 const app = express();
 
 connectToDataBase();

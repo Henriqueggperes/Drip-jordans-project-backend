@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const remoteUrl = "mongodb+srv://jd:jd@apidripjordans.vsdtr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const localUrl = "mongodb://localhost:27017/jordans-db"
-const connectToDataBase = () => {
+function connectToDatabase() {
   mongoose
-    .connect(`${remoteUrl}`, {
+    .connect(process.env.DATABASE_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })

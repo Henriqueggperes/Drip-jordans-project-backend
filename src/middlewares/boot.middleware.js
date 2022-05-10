@@ -11,7 +11,6 @@ const idValidation = (req, res, next) => {
 const objectBodyValidation = (req, res, next) => {
     const objectBody = req.body;
     if(
-        !objectBody||
         !objectBody.nome||
         !objectBody.ano||
         !objectBody.preco||
